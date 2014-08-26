@@ -1,0 +1,102 @@
+/**
+ * flatCornerFold.less
+
+ * Use: 
+ * .flatCornerFold(@foldSize,color,bgcolor,direction,intensity)
+
+ * Example:
+ * @color: #ecf0f1;
+ * @bgcolor: #ecf0f1;
+ * @foldSize: 3rem;
+ * selector {
+ *   .flatCornerFold(@foldSize,@color,@bgcolor,bottomright,25%);
+ * }
+
+ * Github: https://github.com/juanbrujo/flatCornerFold.less
+**/
+
+// INIT MIXIN .flatCornerFold()
+.flatCornerFoldBase(){
+  position: relative;
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+}
+// direction = bottomright
+.flatCornerFold(@foldSize,@color,@bgcolor,@direction:bottomright,@intensity:25%) when (@direction = bottomright){
+  .flatCornerFoldBase();
+  &:after,
+  &:before {
+    bottom: 0;
+  }
+  &:after {
+    right: 0;
+    border-width: @foldSize @foldSize 0 0;
+    border-color: lighten(@color,@intensity) @bgcolor transparent transparent;
+  }
+  &:before {
+    right: @foldSize;
+    border-width: 0 0 @foldSize @foldSize;
+    border-color: transparent transparent darken(@color,@intensity) transparent;
+  }
+}
+// direction =  topright
+.flatCornerFold(@foldSize,@color,@bgcolor,@direction,@intensity:25%) when (@direction = topright){
+  .flatCornerFoldBase();
+  &:after,
+  &:before {
+    right: 0;
+  }
+  &:after {
+    top: 0;
+    border-width: @foldSize 0 0 @foldSize;
+    border-color: @bgcolor transparent transparent lighten(@color,@intensity);
+  }
+  &:before {
+    top: @foldSize;
+    border-width: 0 @foldSize @foldSize 0;
+    border-color: transparent darken(@color,@intensity) transparent transparent;
+  }
+}
+// direction =  topleft
+.flatCornerFold(@foldSize,@color,@bgcolor,@direction,@intensity:25%) when (@direction = topleft){
+  .flatCornerFoldBase();
+  &:after,
+  &:before {
+    left: 0;
+  }
+  &:after {
+    top: 0;
+    border-width: 0 0 @foldSize @foldSize;
+    border-color: transparent transparent lighten(@color,@intensity) @bgcolor;
+  }
+  &:before {
+    top: @foldSize;
+    border-width: @foldSize @foldSize 0 0;
+    border-color: darken(@color,@intensity) transparent transparent transparent;
+  }
+}
+// direction = bottomleft
+.flatCornerFold(@foldSize,@color,@bgcolor,@direction,@intensity:25%) when (@direction = bottomleft){
+  .flatCornerFoldBase();
+  &:after,
+  &:before {
+    bottom: 0;
+  }
+  &:after {
+    left: 0;
+    border-width: 0 @foldSize @foldSize 0;
+border-color: transparent lighten(@color,@intensity) @bgcolor transparent;
+  }
+  &:before {
+    left: @foldSize;
+    border-width: @foldSize 0 0 @foldSize;
+    border-color: transparent transparent transparent darken(@color,@intensity);
+  }
+}
+// END MIXIN .flatCornerFold()
