@@ -27,5 +27,18 @@
  	selector {
  		.flatCornerFold(@foldSize,@color,@bgcolor,bottomright,25%);
  	}
+ 	
+###Advanced Example:
+
+ 	selector {
+ 		.flatCornerFold(1rem,#ecf0f1,#ecf0f1,bottomright,25%);
+ 	}
+ 	selector:after,
+    	selector:before {
+      		transition: .3s;
+    	}
+ 	selector:hover {
+ 		.flatCornerFold(3rem,#ecf0f1,#ecf0f1,bottomright,25%);
+ 	}
 
 #####License: [MIT](https://github.com/juanbrujo/flatCornerFold.less/blob/master/LICENSE)
