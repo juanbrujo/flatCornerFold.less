@@ -4,18 +4,15 @@
 
 ##### Demo: [Codepen.io](http://codepen.io/juanbrujo/full/nLKfo/)
 
-
-
 ![flatCornerFold.less](https://dl.dropboxusercontent.com/u/3522/flatCornerFold.png)
-
 
 ###Use:
 
-	.flatCornerFold(@foldSize,color,bgcolor,direction,intensity)	
-- **foldSize**: side of the folded triangles.
-- **color**: HEX for folded (lighter) and shadow ()darker).
-- **bgcolor**: HEX for background of folded triangle, same as background of the page.
-- **direction**: bottomright (default), topright, topleft, bottomleft.
+	.flatCornerFold(@foldSize,color,bgcolor,direction,intensity);	
+- **foldSize**: size of the folded triangles.
+- **color**: HEX for folded (lighter) and shadow (darker).
+- **bgcolor**: HEX for background of folded triangle, should be the same as background of the page.
+- **direction**: values: bottomright (default) | topright | topleft | bottomleft.
 - **intensity**: opacity (0% ~ 100%) of folded effect.
 	
 
