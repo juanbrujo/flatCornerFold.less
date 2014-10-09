@@ -9,11 +9,11 @@
 ###Use:
 
 	.flatCornerFold(@foldSize,color,bgcolor,direction,intensity);	
-- **foldSize**: size of the folded triangles.
-- **color**: HEX for folded (lighter) and shadow (darker).
-- **bgcolor**: HEX for background of folded triangle, should be the same as background of the page.
+- **foldSize**: size of the folded triangle.
+- **color**: color HEX for folded (lighter) and shadow (darker).
+- **bgcolor**: color HEX for background of folded triangle, should be the same color declared for the background of the page or the parent element.
 - **direction**: values: bottomright (default) | topright | topleft | bottomleft.
-- **intensity**: opacity (0% ~ 100%) of folded effect.
+- **intensity**: opacity (0% ~ 100%) for folded triangle.
 	
 
 ###Example:
