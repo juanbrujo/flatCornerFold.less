@@ -1,14 +1,17 @@
-#flatCornerFold.less
+# flatCornerFold.less
 
-`Less CSS mixin`, to create flat-corner-fold-effect.
+**`Less CSS mixin`, to create flat-corner-fold-effect.**
 
 ##### Demo: [Codepen.io](http://codepen.io/juanbrujo/full/nLKfo/)
 
-![flatCornerFold.less](https://dl.dropboxusercontent.com/u/3522/flatCornerFold.png)
+![flatCornerFold.less](https://i.imgur.com/wwkCloA.png)
 
-###Use:
+### Use:
 
-	.flatCornerFold(@foldSize,color,bgcolor,direction,intensity);	
+```css
+.flatCornerFold(@foldSize,color,bgcolor,direction,intensity);
+```
+
 - **foldSize**: size of the folded triangle.
 - **color**: color HEX for folded (lighter) and shadow (darker).
 - **bgcolor**: color HEX for background of folded triangle, should be the same color declared for the background of the page or the parent element.
@@ -16,26 +19,30 @@
 - **intensity**: opacity (0% ~ 100%) for folded triangle.
 	
 
-###Example:
+### Example:
 
-	@color: #ecf0f1;
- 	@bgcolor: #ecf0f1;
- 	@foldSize: 3rem;
- 	selector {
- 		.flatCornerFold(@foldSize,@color,@bgcolor,bottomright,25%);
- 	}
+```sass
+@color: #ecf0f1;
+@bgcolor: #ecf0f1;
+@foldSize: 3rem;
+selector {
+	.flatCornerFold(@foldSize,@color,@bgcolor,bottomright,25%);
+}
+```
  	
-###Advanced Example:
+### Advanced Example:
 
- 	selector {
- 		.flatCornerFold(1rem,#ecf0f1,#ecf0f1,bottomright,25%);
- 	}
- 	selector:after,
-    	selector:before {
-      		transition: .3s;
-    	}
- 	selector:hover {
- 		.flatCornerFold(3rem,#ecf0f1,#ecf0f1,bottomright,25%);
- 	}
+```sass
+selector {
+	.flatCornerFold(1rem,#ecf0f1,#ecf0f1,bottomright,25%);
+}
+selector:after,
+selector:before {
+	transition: .3s;
+}
+selector:hover {
+	.flatCornerFold(3rem,#ecf0f1,#ecf0f1,bottomright,25%);
+}
+```
 
-#####License: [MIT](https://github.com/juanbrujo/flatCornerFold.less/blob/master/LICENSE)
+##### License: [MIT](https://github.com/juanbrujo/flatCornerFold.less/blob/master/LICENSE)
